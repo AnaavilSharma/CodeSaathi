@@ -1,0 +1,62 @@
+{
+  "languages": {
+    "python": {
+      "extension": "py",
+      "command": "python3 /tmp/{file}",
+      "optimize": {
+        "patterns": [
+          "#.*"
+        ]
+      }
+    },
+    "c": {
+      "extension": "c",
+      "command": "bash -c \"gcc /tmp/{file} -o /tmp/a.out && /tmp/a.out\"",
+      "optimize": {
+        "patterns": [
+          "//.*",
+          "/\\*.*?\\*/"
+        ]
+      }
+    },
+    "cpp": {
+      "extension": "cpp",
+      "command": "bash -c \"g++ /tmp/{file} -o /tmp/a.out && /tmp/a.out\"",
+      "optimize": {
+        "patterns": [
+          "//.*",
+          "/\\*.*?\\*/"
+        ]
+      }
+    },
+    "java": {
+      "extension": "java",
+      "command": "bash -c \"javac /tmp/{file} && java -cp /tmp {classname}\"",
+      "optimize": {
+        "patterns": [
+          "//.*",
+          "/\\*.*?\\*/"
+        ]
+      }
+    },
+    "javascript": {
+      "extension": "js",
+      "command": "node /tmp/{file}",
+      "optimize": {
+        "patterns": [
+          "//.*",
+          "/\\*.*?\\*/"
+        ]
+      }
+    },
+    "swift": {
+      "extension": "swift",
+      "command": "swift /tmp/{file}",
+      "optimize": {
+        "patterns": [
+          "//.*"
+        ]
+      }
+    }
+  }
+}

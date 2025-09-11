@@ -12,4 +12,9 @@ RUN apt-get update && apt-get install -y \
     nodejs \
     npm \
     swift \
- && apt-get clean
+    && apt-get clean
+
+# Set working directory inside container
+WORKDIR /tmp
+
+CMD ["bash"]
